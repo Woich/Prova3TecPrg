@@ -12,5 +12,19 @@ import java.util.List;
  */
 public class Poligonal<T extends Ponto2D> {
     private final List<T> vertices = new ArrayList<>();
+    
+    public int getN(){
+        int numVertice;
+        
+        numVertice = this.vertices.size();
+        
+        return numVertice;
+    }
+    
+    public T get(int i){
+    
+        return this.vertices
+        
+    }
 
 }

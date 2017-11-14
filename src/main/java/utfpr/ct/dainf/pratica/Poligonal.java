@@ -29,6 +29,14 @@ public class Poligonal<T extends Ponto2D> {
         return this.vertices.get(i);
     }
     
-    
+    public void set(int i, T p){
+        if(i == vertices.size()){
+            vertices.add(p);
+        }
+        else if(i>=0 && i<vertices.size()){
+            vertices.set(i, p);
+        }
+        else throw new IvalidSetEx(i);
+    }
 
 }

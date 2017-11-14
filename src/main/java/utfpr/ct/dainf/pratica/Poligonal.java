@@ -38,5 +38,16 @@ public class Poligonal<T extends Ponto2D> {
         }
         else throw new IvalidSetEx(i);
     }
+    
+    public double getComprimento(){
+        
+        double retorno=0;
+        for(int i=0 ; i<this.vertices.size()-1 ; i++){
+            
+            retorno+= this.vertices.get(i).dist(get(i+1));
+        }
+        
+        return retorno;
+    }
 
 }

@@ -21,10 +21,14 @@ public class Poligonal<T extends Ponto2D> {
         return numVertice;
     }
     
-    public T get(int i){
     
-        return this.vertices
-        
+    public T get(int i){
+        if(i<0 || i>this.vertices.size()){
+            throw new InvalidGetEx(i);
+        }
+        return this.vertices.get(i);
     }
+    
+    
 
 }
